@@ -1,0 +1,22 @@
+<div class="card">
+
+  <div class="card-header">
+    <h5 class="card-title">{{ modalHeader }}</h5>
+
+  </div>
+  <div class="card-body pre-scrollable" scrollTracker (scrolled)="updateScrollPos($event)">
+
+    <p>
+      {{ modalContent }}
+    </p>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-md btn-success" [disabled]="!active" (click)="accepter()">Accept</button>
+    <button class="btn btn-md btn-danger" (click)="refuser()">Refuse</button>
+    <button class="btn btn-md btn-default" (click)="goBack()">Back</button>
+
+    
+
+  </div>
+
+</div>
